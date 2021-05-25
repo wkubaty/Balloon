@@ -18,6 +18,7 @@ package com.skydoves.balloondemo
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -79,6 +80,7 @@ class CustomActivity : AppCompatActivity(), CustomAdapter.CustomViewHolder.Deleg
       }
 
       bottomNavigationView.setOnNavigationItemSelectedListener {
+        customTagBalloon.getContentView().findViewById<TextView>(R.id.tagTextView).text = "Long text"
         customTagBalloon.showAlignTop(bottomNavigationView, 130, 0)
         true
       }
